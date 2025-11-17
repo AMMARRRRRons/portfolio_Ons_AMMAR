@@ -13,7 +13,7 @@ body {
 
 /* Navigation Links */
 .nav-link {
-    @apply text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 relative;
+    @apply text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors duration-200 relative;
 }
 
 .nav-link::after {
@@ -23,7 +23,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(to right, #2563eb, #9333ea);
+    background: linear-gradient(to right, #ec4899, #a855f7, #06b6d4);
     transition: width 0.3s ease;
 }
 
@@ -33,11 +33,11 @@ body {
 
 /* Buttons */
 .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-pink-400 hover:via-purple-400 hover:to-cyan-300;
 }
 
 .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-white dark:bg-gray-800 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white dark:bg-gray-800 border-2 border-pink-500 dark:border-pink-400 text-pink-600 dark:text-pink-400 font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:bg-pink-50 dark:hover:bg-pink-900/20;
 }
 
 /* Skill Cards */
@@ -46,11 +46,11 @@ body {
 }
 
 .skill-card:hover {
-    @apply border-blue-500 dark:border-blue-400;
+    @apply border-pink-500 dark:border-pink-400;
 }
 
 .skill-card i {
-    @apply text-blue-600 dark:text-blue-400 mb-3;
+    @apply text-pink-600 dark:text-pink-400 mb-3;
 }
 
 .skill-card span {
@@ -67,12 +67,12 @@ body {
 }
 
 .tech-tag {
-    @apply px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold rounded-full;
+    @apply px-3 py-1 bg-gradient-to-r from-pink-100 to-purple-100 dark:from-pink-900 dark:to-purple-900 text-pink-800 dark:text-pink-200 text-xs font-semibold rounded-full;
 }
 
 /* Education Cards */
 .education-card {
-    @apply bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-blue-600;
+    @apply bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-pink-500;
 }
 
 .education-icon {
@@ -141,11 +141,11 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-blue-600 dark:bg-blue-400 rounded-full;
+    @apply bg-gradient-to-b from-pink-500 to-purple-500 dark:from-pink-400 dark:to-purple-400 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    @apply bg-blue-700 dark:bg-blue-500;
+    @apply from-pink-600 to-purple-600 dark:from-pink-500 dark:to-purple-500;
 }
 
 /* Mobile menu animation */
@@ -209,7 +209,7 @@ img[alt="Ons Ammar"]:hover {
 
 /* Fallback if image doesn't load */
 img[alt="Ons Ammar"][src*="image.png"] {
-    background: linear-gradient(to bottom right, #3b82f6, #8b5cf6);
+    background: linear-gradient(to bottom right, #ec4899, #a855f7, #06b6d4);
 }
 
 /* Responsive adjustments */
