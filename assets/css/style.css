@@ -213,13 +213,25 @@ body {
 
 /* Force uniform size for all education icons and images */
 .education-card .education-icon,
-.education-card .education-image-container {
+.education-card .education-image-container,
+.education-card .education-icon.education-image-container {
     width: 120px !important;
     height: 120px !important;
     min-width: 120px !important;
     min-height: 120px !important;
     max-width: 120px !important;
     max-height: 120px !important;
+    box-sizing: border-box !important;
+}
+
+.education-card .education-image {
+    width: 120px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    min-height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    box-sizing: border-box !important;
 }
 
 .education-icon {
