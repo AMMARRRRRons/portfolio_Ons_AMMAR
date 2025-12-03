@@ -254,6 +254,70 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroSection) {
         heroSection.classList.add('fade-in');
     }
+
+    // ============================================
+    // Achievement Modal Handling
+    // ============================================
+    const achievementCards = document.querySelectorAll('.achievement-card');
+    const achievementModal = document.getElementById('achievementModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const closeModal = document.getElementById('closeModal');
+
+    function openAchievementModal(imageSrc, title) {
+        if (modalImage && modalTitle && achievementModal) {
+            modalImage.src = imageSrc;
+            modalImage.alt = title;
+            modalTitle.textContent = title;
+            achievementModal.classList.remove('hidden');
+            setTimeout(() => {
+                achievementModal.classList.add('show');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    }
+
+    function closeAchievementModal() {
+        if (achievementModal) {
+            achievementModal.classList.remove('show');
+            setTimeout(() => {
+                achievementModal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            }, 300);
+        }
+    }
+
+    // Add click event listeners to achievement cards
+    achievementCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            const imageSrc = card.getAttribute('data-image');
+            const title = card.getAttribute('data-title');
+            if (imageSrc) {
+                openAchievementModal(imageSrc, title);
+            }
+        });
+    });
+
+    // Close modal when clicking close button
+    if (closeModal) {
+        closeModal.addEventListener('click', closeAchievementModal);
+    }
+
+    // Close modal when clicking outside the modal content
+    if (achievementModal) {
+        achievementModal.addEventListener('click', (e) => {
+            if (e.target === achievementModal) {
+                closeAchievementModal();
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && achievementModal && !achievementModal.classList.contains('hidden')) {
+            closeAchievementModal();
+        }
+    });
 });
 
 // ============================================

@@ -592,7 +592,7 @@
             <div class="grid md:grid-cols-2 gap-8">
                 
                 <!-- Achievement 1 - Hult Prize -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border-l-4 border-yellow-500 hover:shadow-xl transition-all duration-300">
+                <div class="achievement-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border-l-4 border-yellow-500 hover:shadow-xl transition-all duration-300 cursor-pointer" data-image="assets/images/achievements/hult-prize.jpg" data-title="1ʳᵉ place – Compétition Hult Prize">
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
                             1<sup>er</sup>
@@ -611,7 +611,7 @@
                 </div>
 
                 <!-- Achievement 2 - Pluxee Tunisia -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border-l-4 border-purple-500 hover:shadow-xl transition-all duration-300">
+                <div class="achievement-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border-l-4 border-purple-500 hover:shadow-xl transition-all duration-300 cursor-pointer" data-image="assets/images/achievements/pluxee-tunisia.jpg" data-title="Finaliste – Compétition Pluxee Tunisia">
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl mr-4">
                             <i class="fas fa-trophy"></i>
@@ -630,7 +630,7 @@
                 </div>
 
                 <!-- Achievement 3 - CTF Qualifications -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border-l-4 border-cyan-500 hover:shadow-xl transition-all duration-300">
+                <div class="achievement-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border-l-4 border-cyan-500 hover:shadow-xl transition-all duration-300 cursor-pointer" data-image="assets/images/achievements/ctf-qualifications.jpg" data-title="7ᵉ place lors des qualifications CTF">
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
                             7
@@ -649,7 +649,7 @@
                 </div>
 
                 <!-- Achievement 4 - Code Red Hackathon -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border-l-4 border-red-500 hover:shadow-xl transition-all duration-300">
+                <div class="achievement-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border-l-4 border-red-500 hover:shadow-xl transition-all duration-300 cursor-pointer" data-image="assets/images/achievements/code-red-hackathon.jpg" data-title="2ᵉ place au hackathon &quot;Code red: The worm era&quot;">
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
                             2<sup>e</sup>
@@ -904,6 +904,21 @@
             </div>
         </div>
     </section>
+
+    <!-- Achievement Image Modal -->
+    <div id="achievementModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+        <div class="modal-content bg-white dark:bg-gray-800 rounded-lg shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-auto">
+            <div class="sticky top-0 bg-white dark:bg-gray-800 px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <img id="modalImage" src="" alt="Achievement" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-8 px-4">

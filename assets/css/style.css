@@ -436,6 +436,41 @@ section {
     }
 }
 
+/* Achievement Card Hover Effect */
+.achievement-card {
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Achievement Modal */
+#achievementModal {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#achievementModal.show {
+    opacity: 1;
+    display: flex !important;
+}
+
+.modal-content {
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+#achievementModal.show .modal-content {
+    transform: scale(1);
+}
+
+#modalImage {
+    max-height: 70vh;
+    object-fit: contain;
+}
+
 /* Print styles */
 @media print {
     header,
