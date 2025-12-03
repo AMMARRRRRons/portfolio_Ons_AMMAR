@@ -318,6 +318,22 @@ document.addEventListener('DOMContentLoaded', () => {
             closeAchievementModal();
         }
     });
+
+    // ============================================
+    // Certification Modal Handling
+    // ============================================
+    const certificationCards = document.querySelectorAll('.certification-card');
+
+    // Add click event listeners to certification cards
+    certificationCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            const imageSrc = card.getAttribute('data-image');
+            const title = card.getAttribute('data-title');
+            if (imageSrc) {
+                openAchievementModal(imageSrc, title);
+            }
+        });
+    });
 });
 
 // ============================================
