@@ -100,8 +100,21 @@
     <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4">
         <div class="container mx-auto text-center">
             <div class="mb-8">
-                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl border-4 border-pink-500 dark:border-pink-400">
-                    <img src="assets/images/WhatsApp Image 2025-10-06 à 15.09.02_4c7ee21d.jpg" alt="Ons Ammar" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27400%27%3E%3Crect fill=%27%23ddd%27 width=%27400%27 height=%27400%27/%3E%3Ctext fill=%27%23999%27 font-family=%27sans-serif%27 font-size=%2718%27 dy=%2710.5%27 font-weight=%27bold%27 x=%2750%25%27 y=%2750%25%27 text-anchor=%27middle%27%3EOA%3C/text%3E%3C/svg%3E'">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl border-4 border-pink-500 dark:border-pink-400 relative">
+                    <video 
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                        class="w-full h-full object-cover"
+                        aria-label="Vidéo de présentation">
+                        <source src="assets/images/video.mp4" type="video/mp4">
+                        <source src="assets/images/video.webm" type="video/webm">
+                        <!-- Fallback si la vidéo ne charge pas -->
+                        <div class="w-full h-full bg-gradient-to-br from-pink-400 via-purple-500 to-cyan-400 flex items-center justify-center text-white text-6xl font-bold">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                    </video>
                 </div>
             </div>
             <h1 class="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">

@@ -194,21 +194,27 @@ section {
     animation: shimmer 2s infinite linear;
 }
 
-/* Photo styling */
-img[alt="Ons Ammar"] {
+/* Video styling in Hero section */
+#home video {
     transition: transform 0.3s ease;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
-img[alt="Ons Ammar"]:hover {
+#home video:hover {
     transform: scale(1.05);
 }
 
-/* Fallback if image doesn't load */
-img[alt="Ons Ammar"][src*="image.png"] {
+/* Ensure video container maintains aspect ratio */
+#home .rounded-full {
+    aspect-ratio: 1 / 1;
+}
+
+/* Video loading state */
+#home video:not([src]) {
     background: linear-gradient(to bottom right, #ec4899, #a855f7, #06b6d4);
 }
 
