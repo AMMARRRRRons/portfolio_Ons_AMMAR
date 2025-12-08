@@ -192,35 +192,50 @@
             <h2 class="text-4xl font-bold text-center mb-12">Compétences</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-                <div class="cert-card rt-competence-card">
+                <div class="cert-card rt-competence-card"
+                     data-title="RT1.5 - Administrer les réseaux et l’Internet"
+                     data-description="Inge de sys télécoms"
+                     data-pdf="assets/files/RT1.5_compte_rendu.pdf">
                     <div class="cert-icon bg-gradient-to-br from-pink-500 to-pink-600">
                         <i class="fas fa-network-wired text-white text-3xl"></i>
                     </div>
                     <h3 class="text-lg font-semibold mb-1 text-center">RT1.5</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-300 text-center">Administrer les réseaux et l’Internet</p>
                 </div>
-                <div class="cert-card rt-competence-card">
+                <div class="cert-card rt-competence-card"
+                     data-title="RT2.5 - Connecter les entreprises et les usagers"
+                     data-description="Expression-culture-comm pro"
+                     data-pdf="assets/files/RT2.5_compte_rendu.pdf">
                     <div class="cert-icon bg-purple-600">
                         <i class="fas fa-building text-white text-3xl"></i>
                     </div>
                     <h3 class="text-lg font-semibold mb-1 text-center">RT2.5</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-300 text-center">Connecter les entreprises et les usagers</p>
                 </div>
-                <div class="cert-card rt-competence-card">
+                <div class="cert-card rt-competence-card"
+                     data-title="RT3.5 - Créer des outils et applications informatiques pour les R&amp;T"
+                     data-description="Supersivion des réseaux"
+                     data-pdf="assets/files/RT3.5_compte_rendu.pdf">
                     <div class="cert-icon bg-gradient-to-br from-blue-500 to-cyan-500">
                         <i class="fas fa-code text-white text-3xl"></i>
                     </div>
                     <h3 class="text-lg font-semibold mb-1 text-center">RT3.5</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-300 text-center">Créer des outils et applications informatiques pour les R&amp;T</p>
                 </div>
-                <div class="cert-card rt-competence-card">
+                <div class="cert-card rt-competence-card"
+                     data-title="RT-CYB-4.5 - Administrer un système d'information sécurisé"
+                     data-description="Architectures sécurisées"
+                     data-pdf="assets/files/RT-CYB-4.5_compte_rendu.pdf">
                     <div class="cert-icon bg-gradient-to-br from-emerald-500 to-green-600">
                         <i class="fas fa-shield-alt text-white text-3xl"></i>
                     </div>
                     <h3 class="text-lg font-semibold mb-1 text-center">RT-CYB-4.5</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-300 text-center">Administrer un système d'information sécurisé</p>
                 </div>
-                <div class="cert-card rt-competence-card">
+                <div class="cert-card rt-competence-card"
+                     data-title="RT-CYB-5.5 - Surveiller un système d'information sécurisé"
+                     data-description="Ass la sécu et la sup avanc d'un sys d'info"
+                     data-pdf="assets/files/RT-CYB-5.5_compte_rendu.pdf">
                     <div class="cert-icon bg-gradient-to-br from-orange-500 to-amber-500">
                         <i class="fas fa-eye text-white text-3xl"></i>
                     </div>
@@ -859,6 +874,25 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal Compétence -->
+    <div id="competenceModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+        <div class="modal-content bg-white dark:bg-gray-800 rounded-lg shadow-2xl max-w-3xl w-full mx-4 max-h-[90vh] overflow-auto">
+            <div class="sticky top-0 bg-white dark:bg-gray-800 px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
+                <h3 id="competenceModalTitle" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                <button id="closeCompetenceModal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="p-6 space-y-4">
+                <p id="competenceModalDesc" class="text-gray-700 dark:text-gray-200 leading-relaxed"></p>
+                <a id="competenceModalLink" href="#" download
+                   class="inline-flex items-center px-4 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <i class="fas fa-file-download mr-2"></i> Voir compte rendu (PDF)
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Achievement Image Modal -->
     <div id="achievementModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">

@@ -329,10 +329,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close modal with Escape key
+    // ============================================
+    // Compétences (RT) Modal Handling
+    // ============================================
+    const competenceCards = document.querySelectorAll('.rt-competence-card');
+    const competenceModal = document.getElementById('competenceModal');
+    const competenceTitle = document.getElementById('competenceModalTitle');
+    const competenceDesc = document.getElementById('competenceModalDesc');
+    const competenceLink = document.getElementById('competenceModalLink');
+    const closeCompetenceModal = document.getElementById('closeCompetenceModal');
+
+    function openCompetenceModal(title, description, pdfLink) {
+        if (competenceModal && competenceTitle && competenceDesc && competenceLink) {
+            competenceTitle.textContent = title || '';
+            competenceDesc.textContent = description || '';
+            competenceLink.href = pdfLink || '#';
+            competenceModal.classList.remove('hidden');
+            setTimeout(() => {
+                competenceModal.classList.add('show');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeCompetenceModalFn() {
+        if (competenceModal) {
+            competenceModal.classList.remove('show');
+            setTimeout(() => {
+                competenceModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+    }
+
+    competenceCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const title = card.getAttribute('data-title');
+            const description = card.getAttribute('data-description');
+            const pdf = card.getAttribute('data-pdf');
+            openCompetenceModal(title, description, pdf);
+        });
+    });
+
+    if (closeCompetenceModal) {
+        closeCompetenceModal.addEventListener('click', closeCompetenceModalFn);
+    }
+
+    if (competenceModal) {
+        competenceModal.addEventListener('click', (e) => {
+            if (e.target === competenceModal) {
+                closeCompetenceModalFn();
+            }
+        });
+    }
+
+    // Close modals with Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && achievementModal && !achievementModal.classList.contains('hidden')) {
-            closeAchievementModal();
+        if (e.key === 'Escape') {
+            if (achievementModal && !achievementModal.classList.contains('hidden')) {
+                closeAchievementModal();
+            }
+            if (competenceModal && !competenceModal.classList.contains('hidden')) {
+                closeCompetenceModalFn();
+            }
         }
     });
 
