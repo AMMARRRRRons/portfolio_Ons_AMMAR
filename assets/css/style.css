@@ -187,7 +187,7 @@ body {
 }
 
 .rt-competence-card {
-    @apply hover:-translate-y-1 transition-transform duration-300;
+    @apply hover:-translate-y-1 transition-transform duration-300 h-full w-full flex flex-col;
 }
 
 .interest-card {
