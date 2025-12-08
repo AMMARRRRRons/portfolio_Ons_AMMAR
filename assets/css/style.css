@@ -186,6 +186,10 @@ body {
     @apply border-2 border-pink-200/80 dark:border-pink-800/60 shadow-lg dark:shadow-pink-900/30;
 }
 
+.rt-competence-card {
+    @apply hover:-translate-y-1 transition-transform duration-300;
+}
+
 .interest-card {
     @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
