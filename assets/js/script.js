@@ -37,6 +37,22 @@ function toggleDarkMode() {
 initDarkMode();
 
 // Wait for DOM to be ready
+const MAIL_ENDPOINT = 'https://formsubmit.co/ajax/ons.ammar@edu.univ-paris13.fr';
+const COMMON_HEADERS = { 'Accept': 'application/json' };
+
+async function sendFormData(formData) {
+    const response = await fetch(MAIL_ENDPOINT, {
+        method: 'POST',
+        headers: COMMON_HEADERS,
+        body: formData
+    });
+
+    if (!response.ok) {
+        const message = await response.text();
+        throw new Error(message || 'Erreur réseau');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Get DOM elements after DOM is loaded
     const darkModeToggle = document.getElementById('darkModeToggle');
@@ -44,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobileMenu');
     const contactForm = document.getElementById('contactForm');
     const navLinks = document.querySelectorAll('.nav-link');
+    const adviceForm = document.getElementById('adviceForm');
     
     // ============================================
     // Dark Mode Toggle Event Listener
@@ -189,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Contact Form Handling
     // ============================================
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             // Get form data
@@ -198,19 +215,45 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = formData.get('email');
             const message = formData.get('message');
             
-            // Create mailto link (since we don't have a backend)
-            const subject = encodeURIComponent(`Contact depuis le portfolio - ${name}`);
-            const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-            const mailtoLink = `mailto:ons.ammar@edu.univ-paris13.fr?subject=${subject}&body=${body}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            showNotification('Merci pour votre message ! Votre client email va s\'ouvrir.', 'success');
-            
-            // Reset form
-            contactForm.reset();
+            const payload = new FormData();
+            payload.append('Nom', name);
+            payload.append('Email', email);
+            payload.append('Message', message);
+            payload.append('_subject', `Contact portfolio - ${name || 'Anonyme'}`);
+            payload.append('_replyto', email);
+
+            try {
+                await sendFormData(payload);
+                showNotification('Merci pour votre message ! Il a été envoyé.', 'success');
+                contactForm.reset();
+            } catch (err) {
+                console.error(err);
+                showNotification('Envoi impossible pour le moment. Réessayez plus tard.', 'error');
+            }
+        });
+    }
+
+    if (adviceForm) {
+        adviceForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(adviceForm);
+            const name = formData.get('advice-name') || 'Anonyme';
+            const advice = formData.get('advice-message') || '';
+
+            const payload = new FormData();
+            payload.append('Nom', name);
+            payload.append('Conseil', advice);
+            payload.append('_subject', `Recommandation portfolio - ${name}`);
+
+            try {
+                await sendFormData(payload);
+                showNotification('Merci pour votre conseil ! Il a été envoyé.', 'success');
+                adviceForm.reset();
+            } catch (err) {
+                console.error(err);
+                showNotification('Envoi impossible pour le moment. Réessayez plus tard.', 'error');
+            }
         });
     }
 
