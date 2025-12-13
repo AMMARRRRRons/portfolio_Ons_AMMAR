@@ -307,11 +307,19 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
+                console.log('=== DÉBUT ENVOI EMAIL ===');
+                console.log('Paramètres envoyés:', templateParams);
                 const result = await sendFormData(templateParams);
+                console.log('=== EMAIL ENVOYÉ AVEC SUCCÈS ===');
+                console.log('Résultat:', result);
                 showNotification('Merci pour votre message ! Il a été envoyé.', 'success');
                 contactForm.reset();
             } catch (err) {
-                console.error('Erreur:', err);
+                console.error('=== ERREUR LORS DE L\'ENVOI ===');
+                console.error('Erreur complète:', err);
+                console.error('Type:', typeof err);
+                console.error('Message:', err.message);
+                console.error('Stack:', err.stack);
                 showNotification(err.message || 'Envoi impossible pour le moment. Réessayez plus tard.', 'error');
             }
         });
