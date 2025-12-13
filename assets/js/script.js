@@ -58,7 +58,7 @@ const EMAILJS_PUBLIC_KEY = 'UWtXhwew_bc1pYDG5';       // ⬅️ Remplacez par vo
 
 // Initialize EmailJS si configuré
 (function() {
-    if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+    if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
         emailjs.init(EMAILJS_PUBLIC_KEY);
     }
 })();
@@ -70,22 +70,33 @@ async function sendFormData(templateParams) {
     }
 
     // Vérifier si EmailJS est configuré
-    if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' || 
-        EMAILJS_SERVICE_ID === 'service_portfolio' || 
-        EMAILJS_TEMPLATE_ID === 'template_portfolio') {
+    if (!EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' || 
+        !EMAILJS_SERVICE_ID || EMAILJS_SERVICE_ID === 'service_portfolio' || 
+        !EMAILJS_TEMPLATE_ID || EMAILJS_TEMPLATE_ID === 'template_portfolio') {
         // Essayer avec FormSubmit en fallback
         return await sendFormDataFallback(templateParams);
     }
 
     try {
+        console.log('Envoi EmailJS avec:', {
+            service: EMAILJS_SERVICE_ID,
+            template: EMAILJS_TEMPLATE_ID,
+            params: templateParams
+        });
         const response = await emailjs.send(
             EMAILJS_SERVICE_ID,
             EMAILJS_TEMPLATE_ID,
             templateParams
         );
+        console.log('Réponse EmailJS:', response);
         return response;
     } catch (error) {
-        console.error('Erreur EmailJS:', error);
+        console.error('Erreur EmailJS complète:', error);
+        console.error('Détails:', {
+            status: error.status,
+            text: error.text,
+            message: error.message
+        });
         // Essayer avec FormSubmit en fallback
         return await sendFormDataFallback(templateParams);
     }
@@ -288,10 +299,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const templateParams = {
                 to_email: RECIPIENT_EMAIL,
-                from_name: name,
-                from_email: email,
-                message: emailContent,
-                subject: `Contact portfolio - ${name || 'Anonyme'}`
+                name: name,                    // Pour le template {{name}}
+                from_name: name,               // Pour le template {{from_name}}
+                from_email: email,             // Pour le template {{from_email}}
+                message: emailContent,         // Pour le template {{message}}
+                subject: `Contact portfolio - ${name || 'Anonyme'}`  // Pour le template {{subject}}
             };
 
             try {
@@ -318,9 +330,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const templateParams = {
                 to_email: RECIPIENT_EMAIL,
-                from_name: name,
-                message: emailContent,
-                subject: `Recommandation portfolio - ${name}`
+                name: name,                    // Pour le template {{name}}
+                from_name: name,               // Pour le template {{from_name}}
+                message: emailContent,         // Pour le template {{message}}
+                subject: `Recommandation portfolio - ${name}`  // Pour le template {{subject}}
             };
 
             try {
