@@ -191,6 +191,30 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuToggle.addEventListener('click', toggleMobileMenu);
     }
 
+    // ============================================
+    // Mobile About Submenu Toggle
+    // ============================================
+    const mobileAboutToggle = document.getElementById('mobileAboutToggle');
+    const mobileAboutSubmenu = document.getElementById('mobileAboutSubmenu');
+    const mobileAboutIcon = document.getElementById('mobileAboutIcon');
+
+    if (mobileAboutToggle && mobileAboutSubmenu && mobileAboutIcon) {
+        mobileAboutToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isOpen = !mobileAboutSubmenu.classList.contains('hidden');
+            
+            if (isOpen) {
+                mobileAboutSubmenu.classList.add('hidden');
+                mobileAboutIcon.classList.remove('fa-chevron-up');
+                mobileAboutIcon.classList.add('fa-chevron-down');
+            } else {
+                mobileAboutSubmenu.classList.remove('hidden');
+                mobileAboutIcon.classList.remove('fa-chevron-down');
+                mobileAboutIcon.classList.add('fa-chevron-up');
+            }
+        });
+    }
+
     // Close mobile menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
