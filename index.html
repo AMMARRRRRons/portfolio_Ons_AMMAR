@@ -221,7 +221,7 @@
             <h2 class="text-4xl font-bold text-center mb-12">Compétences</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 items-stretch">
-                <div class="cert-card">
+                <div id="competence-reseaux-internet" class="cert-card scroll-mt-24">
                     <div class="cert-icon bg-gradient-to-br from-pink-500 to-pink-600">
                         <i class="fas fa-network-wired text-white text-3xl"></i>
                     </div>
@@ -229,25 +229,25 @@
                         Administrer les réseaux et l'Internet
                     </p>
                 </div>
-                <div class="cert-card">
+                <div id="competence-entreprises-usagers" class="cert-card scroll-mt-24">
                     <div class="cert-icon bg-purple-600">
                         <i class="fas fa-building text-white text-3xl"></i>
                     </div>
                     <p class="text-sm text-gray-600 dark:text-gray-300 text-center">Connecter les entreprises et les usagers</p>
                 </div>
-                <div class="cert-card">
+                <div id="competence-outils-applications" class="cert-card scroll-mt-24">
                     <div class="cert-icon bg-gradient-to-br from-blue-500 to-cyan-500">
                         <i class="fas fa-code text-white text-3xl"></i>
                     </div>
                     <p class="text-sm text-gray-600 dark:text-gray-300 text-center">Créer des outils et applications informatiques pour les R&amp;T</p>
                 </div>
-                <div class="cert-card">
+                <div id="competence-systeme-securise" class="cert-card scroll-mt-24">
                     <div class="cert-icon bg-gradient-to-br from-emerald-500 to-green-600">
                         <i class="fas fa-shield-alt text-white text-3xl"></i>
                     </div>
                     <p class="text-sm text-gray-600 dark:text-gray-300 text-center">Administrer un système d'information sécurisé</p>
                 </div>
-                <div class="cert-card">
+                <div id="competence-surveillance-securise" class="cert-card scroll-mt-24">
                     <div class="cert-icon bg-gradient-to-br from-orange-500 to-amber-500">
                         <i class="fas fa-eye text-white text-3xl"></i>
                     </div>
@@ -315,6 +315,10 @@
                                     <span>Conception d'une interface conviviale favorisant l'entraide et le soutien communautaire</span>
                                 </li>
                             </ul>
+                            <a href="#competence-entreprises-usagers" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white font-semibold transition-colors shadow mt-4">
+                                <i class="fas fa-link"></i>
+                                <span>Compétence associée</span>
+                            </a>
                         </div>
                     </div>
 
@@ -340,6 +344,10 @@
                                     <span>Utilisation de SQLite pour la gestion des données (offres d'emploi, comptes utilisateurs, candidatures) avec contrôle de validité des entrées et gestion des erreurs via des messages interactifs</span>
                                 </li>
                             </ul>
+                            <a href="#competence-entreprises-usagers" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600 text-white font-semibold transition-colors shadow mt-4">
+                                <i class="fas fa-link"></i>
+                                <span>Compétence associée</span>
+                            </a>
                         </div>
                     </div>
 
@@ -375,10 +383,16 @@
                                     <span>Appliquer les bonnes pratiques de sécurité</span>
                                 </li>
                             </ul>
-                            <a href="assets/files/RT1.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-pink-600 hover:bg-pink-700 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-semibold transition-colors shadow">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Voir le projet</span>
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                                <a href="assets/files/RT1.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-pink-600 hover:bg-pink-700 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Voir le projet</span>
+                                </a>
+                                <a href="#competence-reseaux-internet" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-link"></i>
+                                    <span>Compétence associée</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -392,10 +406,16 @@
                             <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm">
                                 Ce module vise à développer les compétences nécessaires pour établir une communication efficace entre les entreprises et leurs publics. Il combine l'apprentissage des techniques d'expression écrite et orale, la compréhension des enjeux culturels et professionnels, et l'acquisition des outils pour adapter son message aux différents interlocuteurs dans un contexte professionnel.
                             </p>
-                            <a href="assets/files/RT2.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white font-semibold transition-colors shadow">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Voir le projet</span>
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                                <a href="assets/files/RT2.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Voir le projet</span>
+                                </a>
+                                <a href="#competence-entreprises-usagers" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-link"></i>
+                                    <span>Compétence associée</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -409,10 +429,16 @@
                             <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm">
                                 Ce module permet d'acquérir les compétences nécessaires pour surveiller, administrer et sécuriser des réseaux informatiques. Il couvre les techniques de détection d'incidents, la gestion des performances, l'utilisation d'outils de supervision et l'analyse des flux afin de garantir la disponibilité et la fiabilité des infrastructures réseau.
                             </p>
-                            <a href="assets/files/RT3.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold transition-colors shadow">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Voir le projet</span>
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                                <a href="assets/files/RT3.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Voir le projet</span>
+                                </a>
+                                <a href="#competence-outils-applications" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-link"></i>
+                                    <span>Compétence associée</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -426,10 +452,16 @@
                             <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm">
                                 Ce module permet de comprendre et de concevoir des architectures informatiques robustes et sécurisées. Il couvre la sécurisation des infrastructures, la segmentation des réseaux, les mécanismes de défense et l'intégration des solutions de sécurité dans l'ensemble du système d'information.
                             </p>
-                            <a href="assets/files/RT-CYB-4.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white font-semibold transition-colors shadow">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Voir le projet</span>
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                                <a href="assets/files/RT-CYB-4.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Voir le projet</span>
+                                </a>
+                                <a href="#competence-systeme-securise" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-link"></i>
+                                    <span>Compétence associée</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -443,10 +475,16 @@
                             <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm">
                                 Ce module permet de gérer et sécuriser un système d'information de manière avancée, en combinant administration, supervision, contrôle d'accès, audits et détection proactive des vulnérabilités afin de maintenir l'intégrité et la disponibilité des données.
                             </p>
-                            <a href="assets/files/RT-CYB-5.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600 text-white font-semibold transition-colors shadow">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Voir le projet</span>
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                                <a href="assets/files/RT-CYB-5.5_compte_rendu.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Voir le projet</span>
+                                </a>
+                                <a href="#competence-surveillance-securise" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 text-white font-semibold transition-colors shadow">
+                                    <i class="fas fa-link"></i>
+                                    <span>Compétence associée</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -479,6 +517,10 @@
                                     <span>Renforcement de la compréhension des architectures réseau et des principes de cybersécurité à travers la manipulation directe des protocoles</span>
                                 </li>
                             </ul>
+                            <a href="#competence-outils-applications" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-pink-600 hover:bg-pink-700 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-semibold transition-colors shadow mt-4">
+                                <i class="fas fa-link"></i>
+                                <span>Compétence associée</span>
+                            </a>
                         </div>
                     </div>
 
@@ -503,6 +545,10 @@
                                     <span>Déploiement d'une solution complète avec API FastAPI et interface web utilisateur</span>
                                 </li>
                             </ul>
+                            <a href="#competence-surveillance-securise" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 text-white font-semibold transition-colors shadow mt-4">
+                                <i class="fas fa-link"></i>
+                                <span>Compétence associée</span>
+                            </a>
                         </div>
                     </div>
 
@@ -527,6 +573,10 @@
                                     <span>Application des principes Infrastructure as Code (IaC) pour assurer scalabilité, répétabilité et mises à jour simplifiées</span>
                                 </li>
                             </ul>
+                            <a href="#competence-outils-applications" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 text-white font-semibold transition-colors shadow mt-4">
+                                <i class="fas fa-link"></i>
+                                <span>Compétence associée</span>
+                            </a>
                         </div>
                     </div>
 
