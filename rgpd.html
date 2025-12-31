@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politique de confidentialité RGPD - Portfolio de Ons Ammar">
+    <meta name="author" content="Ons Ammar">
+    <title>Politique de confidentialité (RGPD) - Ons Ammar</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Dark Mode Script (inline to prevent flash) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        })();
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent hover:from-pink-500 hover:via-purple-500 hover:to-cyan-400 transition-all">
+                    Onsss
+                </a>
+                
+                <!-- Dark Mode Toggle -->
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" type="button" class="p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all text-gray-700 dark:text-gray-300 border-2 border-gray-300 dark:border-gray-600 hover:border-pink-500 dark:hover:border-pink-400" title="Basculer le mode sombre/clair" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon dark:hidden text-xl text-gray-700"></i>
+                        <i class="fas fa-sun hidden dark:inline text-xl text-yellow-400"></i>
+                    </button>
+                    <a href="index.html" class="px-4 py-2 rounded-lg bg-pink-600 hover:bg-pink-700 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-semibold transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i>Retour au portfolio
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- RGPD Privacy Policy Section -->
+    <section class="py-20 px-4 bg-gray-50 dark:bg-gray-800 mt-20">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-4xl font-bold text-center mb-12">Politique de confidentialité (RGPD)</h1>
+            
+            <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 space-y-6">
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">1. Identité du responsable du site</h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Le responsable du traitement des données est : <strong>Ons Ammar</strong><br>
+                        Email de contact : <a href="mailto:ons.ammar@edu.univ-paris13.fr" class="text-pink-600 dark:text-pink-400 hover:underline">ons.ammar@edu.univ-paris13.fr</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">2. Finalité de la collecte des données</h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Les données collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes de contact et d'information. Aucune autre finalité n'est poursuivie.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">3. Données collectées</h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Les données suivantes sont collectées via le formulaire de contact :
+                    </p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 space-y-1 ml-4">
+                        <li>Nom</li>
+                        <li>Adresse email</li>
+                        <li>Message</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">4. Base légale</h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Le traitement de vos données personnelles est basé sur votre <strong>consentement explicite</strong>, manifesté par la case à cocher obligatoire lors de l'envoi du formulaire de contact.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">5. Durée de conservation</h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Les données collectées sont conservées pour une durée maximale de <strong>12 mois</strong> à compter de la dernière interaction, sauf demande de suppression de votre part.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">6. Absence de cession à des tiers</h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Vos données personnelles ne sont en aucun cas vendues, louées ou cédées à des tiers. Elles sont utilisées exclusivement pour répondre à vos demandes de contact.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">7. Vos droits</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-2">
+                        Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
+                    </p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 space-y-1 ml-4">
+                        <li><strong>Droit d'accès</strong> : Vous pouvez demander à connaître les données vous concernant</li>
+                        <li><strong>Droit de rectification</strong> : Vous pouvez demander la correction de vos données</li>
+                        <li><strong>Droit à l'effacement</strong> : Vous pouvez demander la suppression de vos données</li>
+                        <li><strong>Droit d'opposition</strong> : Vous pouvez vous opposer au traitement de vos données</li>
+                        <li><strong>Droit à la portabilité</strong> : Vous pouvez demander la récupération de vos données</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">8. Exercice de vos droits</h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Pour exercer vos droits, vous pouvez me contacter à l'adresse suivante : <a href="mailto:ons.ammar@edu.univ-paris13.fr" class="text-pink-600 dark:text-pink-400 hover:underline">ons.ammar@edu.univ-paris13.fr</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">9. Hébergement</h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Ce site est hébergé dans un environnement pédagogique/local. Les données sont stockées de manière sécurisée et ne sont pas transférées en dehors de l'Union Européenne.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        <strong>Dernière mise à jour :</strong> Janvier 2025
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 px-4">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/ons-ammar" class="hover:text-pink-400 transition-colors" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/AMMARRRRRons" class="hover:text-gray-100 transition-colors" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="mailto:ons.ammar@edu.univ-paris13.fr" class="hover:text-red-400 transition-colors" aria-label="Email">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-sm">
+                &copy; 2025 Ons Ammar. Tous droits réservés.
+            </p>
+            <p class="text-xs mt-2 text-gray-500">
+                Portfolio développé avec HTML, CSS et JavaScript
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
