@@ -312,6 +312,13 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            // Check RGPD consent
+            const rgpdConsent = document.getElementById('rgpd-consent');
+            if (!rgpdConsent || !rgpdConsent.checked) {
+                showNotification('Veuillez accepter la politique de confidentialité pour envoyer votre message.', 'error');
+                return;
+            }
+            
             // Get form data
             const formData = new FormData(contactForm);
             const name = formData.get('name');
@@ -338,6 +345,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Résultat:', result);
                 showNotification('Merci pour votre message ! Il a été envoyé.', 'success');
                 contactForm.reset();
+                // Reset RGPD checkbox after form reset
+                if (rgpdConsent) {
+                    rgpdConsent.checked = false;
+                }
             } catch (err) {
                 console.error('=== ERREUR LORS DE L\'ENVOI ===');
                 console.error('Erreur complète:', err);
