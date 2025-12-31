@@ -619,7 +619,61 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeWelcomeBanner) {
         closeWelcomeBanner.addEventListener('click', hideWelcomeBanner);
     }
+
+    // ============================================
+    // Competence Simple Modal Handling
+    // ============================================
+    const competenceSimpleModal = document.getElementById('competenceSimpleModal');
+    const competenceSimpleModalTitle = document.getElementById('competenceSimpleModalTitle');
+    const closeCompetenceSimpleModal = document.getElementById('closeCompetenceSimpleModal');
+
+    // Close modal when clicking close button
+    if (closeCompetenceSimpleModal) {
+        closeCompetenceSimpleModal.addEventListener('click', closeCompetenceSimpleModalFn);
+    }
+
+    // Close modal when clicking outside the modal content
+    if (competenceSimpleModal) {
+        competenceSimpleModal.addEventListener('click', (e) => {
+            if (e.target === competenceSimpleModal) {
+                closeCompetenceSimpleModalFn();
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (competenceSimpleModal && !competenceSimpleModal.classList.contains('hidden')) {
+                closeCompetenceSimpleModalFn();
+            }
+        }
+    });
 });
+
+// ============================================
+// Competence Simple Modal Functions (Global)
+// ============================================
+function openCompetenceSimpleModal(competenceName) {
+    const competenceSimpleModal = document.getElementById('competenceSimpleModal');
+    const competenceSimpleModalTitle = document.getElementById('competenceSimpleModalTitle');
+    
+    if (competenceSimpleModal && competenceSimpleModalTitle) {
+        competenceSimpleModalTitle.textContent = competenceName;
+        competenceSimpleModal.classList.remove('hidden');
+        competenceSimpleModal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function closeCompetenceSimpleModalFn() {
+    const competenceSimpleModal = document.getElementById('competenceSimpleModal');
+    if (competenceSimpleModal) {
+        competenceSimpleModal.classList.remove('flex');
+        competenceSimpleModal.classList.add('hidden');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
 
 // ============================================
 // Notification System
