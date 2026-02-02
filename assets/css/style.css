@@ -973,7 +973,12 @@ section {
    (Light + Dark, Accent Cyan, Gold Highlight)
    ============================================ */
 
-:root {
+/* ============================================
+   Cyber Portfolio Color System OVERRIDES
+   (Light + Dark, Deep Red Accent, Gold Highlight)
+   ============================================ */
+
+   :root {
     /* LIGHT MODE */
     --bg-main: #F6F8FC;
     --bg-surface-1: #FFFFFF;
@@ -984,31 +989,31 @@ section {
     --text-secondary: #3A4266;
     --text-muted: #7B82A6;
 
-    /* Single accent (electric cyan) */
-    --accent-primary: #00CFE8;
-    --accent-soft: #4DE6F2;
-    --accent-muted: #008FA1;
+    /* Single accent (deep cyber red) */
+    --accent-primary: #420911;
+    --accent-soft: #6A1A22;
+    --accent-muted: #2B060B;
 
     /* Gold highlight (text / small accents only) */
     --gold-primary: #D4AF37;
     --gold-soft: #E6C65C;
     --gold-muted: #9F872B;
 
-    /* Map legacy cyber-red / cyber-blue variables to cyan accent shades */
-    --cyber-red-700: #008FA1;
-    --cyber-red-600: #00CFE8;
-    --cyber-red-500: #4DE6F2;
-    --cyber-red-400: #7BEFF6;
-    --cyber-red-300: #B5F7FA;
+    /* Map legacy cyber-red / cyber-blue variables */
+    --cyber-red-700: #2B060B;
+    --cyber-red-600: #420911;
+    --cyber-red-500: #6A1A22;
+    --cyber-red-400: #8A3038;
+    --cyber-red-300: #B4565E;
 
-    --cyber-blue-700: #008FA1;
-    --cyber-blue-600: #00CFE8;
-    --cyber-blue-500: #4DE6F2;
-    --cyber-blue-400: #7BEFF6;
-    --cyber-blue-300: #B5F7FA;
+    --cyber-blue-700: #1E2747;
+    --cyber-blue-600: #1E2747;
+    --cyber-blue-500: #1E2747;
+    --cyber-blue-400: #1E2747;
+    --cyber-blue-300: #1E2747;
 
-    --cyber-red-soft: rgba(0, 207, 232, 0.10);
-    --cyber-blue-soft: rgba(0, 207, 232, 0.14);
+    --cyber-red-soft: rgba(66, 9, 17, 0.18);
+    --cyber-blue-soft: rgba(30, 39, 71, 0.22);
 }
 
 .dark {
@@ -1023,29 +1028,29 @@ section {
     --text-muted: #6C7391;
 
     /* Accent + gold stay the same in dark mode */
-    --accent-primary: #00CFE8;
-    --accent-soft: #4DE6F2;
-    --accent-muted: #008FA1;
+    --accent-primary: #420911;
+    --accent-soft: #6A1A22;
+    --accent-muted: #2B060B;
 
     --gold-primary: #D4AF37;
     --gold-soft: #E6C65C;
     --gold-muted: #9F872B;
 
-    /* Cyan shades for legacy variables in dark context */
-    --cyber-red-700: #008FA1;
-    --cyber-red-600: #00CFE8;
-    --cyber-red-500: #4DE6F2;
-    --cyber-red-400: #7BEFF6;
-    --cyber-red-300: #B5F7FA;
+    /* Deep red accent for legacy variables in dark context */
+    --cyber-red-700: #2B060B;
+    --cyber-red-600: #420911;
+    --cyber-red-500: #6A1A22;
+    --cyber-red-400: #8A3038;
+    --cyber-red-300: #B4565E;
 
-    --cyber-blue-700: #008FA1;
-    --cyber-blue-600: #00CFE8;
-    --cyber-blue-500: #4DE6F2;
-    --cyber-blue-400: #7BEFF6;
-    --cyber-blue-300: #B5F7FA;
+    --cyber-blue-700: #1E2747;
+    --cyber-blue-600: #1E2747;
+    --cyber-blue-500: #1E2747;
+    --cyber-blue-400: #1E2747;
+    --cyber-blue-300: #1E2747;
 
-    --cyber-red-soft: rgba(0, 207, 232, 0.14);
-    --cyber-blue-soft: rgba(0, 207, 232, 0.18);
+    --cyber-red-soft: rgba(66, 9, 17, 0.24);
+    --cyber-blue-soft: rgba(30, 39, 71, 0.26);
 }
 
 /* Neutral borders to match palette */
@@ -1066,12 +1071,12 @@ section {
     border-color: var(--gold-primary) !important;
 }
 
-/* Prevent gold on large backgrounds – use cyan accent instead */
+/* Prevent gold on large backgrounds – use structural / subtle backgrounds instead */
 .bg-yellow-500,
 .bg-yellow-600,
 .bg-yellow-100,
 .dark .bg-yellow-900 {
-    background-color: var(--accent-soft) !important;
+    background-color: var(--bg-surface-1) !important;
 }
 
 /* Scrollbar track uses structural background */
