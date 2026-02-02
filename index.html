@@ -1140,28 +1140,28 @@
                         <img src="assets/images/interets/musique.jpg" alt="Pratique musicale" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'interest-image-fallback\'><i class=\'fas fa-music\'></i></div>';">
                     </div>
                         <h4 class="interest-title">Expression musicale</h4>
-                    <p class="interest-description">Pratique instrumentale et veille culturelle pour nourrir ma créativité.</p>
+                    <p class="interest-description" style="display: none;">J’ai pratiqué la musique pendant 7 ans, développant discipline, créativité et engagement sur le long terme.</p>
                 </div>
                 <div class="interest-card">
                     <div class="interest-image">
                         <img src="assets/images/interets/protection-animale.jpg" alt="Engagement pour les animaux" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'interest-image-fallback\'><i class=\'fas fa-paw\'></i></div>';">
                     </div>
                         <h4 class="interest-title">Protection animale</h4>
-                    <p class="interest-description">Sensibilisation et bénévolat ponctuel au profit du bien-être animal.</p>
+                    <p class="interest-description" style="display: none;">J’ai rejoint des associations de protection animale, notamment *Animaux sans toit*, et participé à la construction d’abris pour les chats et chiens des rues.</p>
                 </div>
                 <div class="interest-card">
                     <div class="interest-image">
                         <img src="assets/images/interets/sports.jpg" alt="Activité sportive" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'interest-image-fallback\'><i class=\'fas fa-running\'></i></div>';">
                     </div>
                         <h4 class="interest-title">Condition physique</h4>
-                        <p class="interest-description">Pratique régulière de sports collectifs pour cultiver esprit d'équipe.</p>
+                        <p class="interest-description" style="display: none;">Ancienne athlète professionnelle, j’ai pratiqué la natation pendant 7 ans et le tennis pendant 2 ans, renforçant rigueur, endurance et esprit d’équipe.</p>
                 </div>
                 <div class="interest-card">
                     <div class="interest-image">
                         <img src="assets/images/interets/public-speaking.jpg" alt="Prise de parole en public" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'interest-image-fallback\'><i class=\'fas fa-microphone\'></i></div>';">
                     </div>
                         <h4 class="interest-title">Public speaking</h4>
-                        <p class="interest-description">Animation d'ateliers et pitchs pour fédérer et transmettre clairement.</p>
+                        <p class="interest-description" style="display: none;">J’ai participé à des Model United Nations (MUN) et assuré des rôles de présentatrice pour des projets Enactus, développant aisance orale et capacité de synthèse.</p>
                     </div>
                 </div>
             </div>
@@ -1348,6 +1348,21 @@
     <!-- Scripts -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        // Toggle descriptions in "Centres d'intérêt" section on title click
+        (function () {
+            var cards = document.querySelectorAll('#about-interests .interest-card');
+            cards.forEach(function (card) {
+                var title = card.querySelector('.interest-title');
+                var desc = card.querySelector('.interest-description');
+                if (!title || !desc) return;
+                title.addEventListener('click', function () {
+                    var isVisible = desc.style.display === 'block';
+                    desc.style.display = isVisible ? 'none' : 'block';
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
 
