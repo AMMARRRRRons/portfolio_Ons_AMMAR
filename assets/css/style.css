@@ -968,3 +968,114 @@ section {
     }
 }
 
+/* ============================================
+   Cyber Portfolio Color System OVERRIDES
+   (Light + Dark, Accent Cyan, Gold Highlight)
+   ============================================ */
+
+:root {
+    /* LIGHT MODE */
+    --bg-main: #F6F8FC;
+    --bg-surface-1: #FFFFFF;
+    --bg-surface-2: #FFFFFF;
+    --border-color: #D7DBE8;
+
+    --text-primary: #0D111C;
+    --text-secondary: #3A4266;
+    --text-muted: #7B82A6;
+
+    /* Single accent (electric cyan) */
+    --accent-primary: #00CFE8;
+    --accent-soft: #4DE6F2;
+    --accent-muted: #008FA1;
+
+    /* Gold highlight (text / small accents only) */
+    --gold-primary: #D4AF37;
+    --gold-soft: #E6C65C;
+    --gold-muted: #9F872B;
+
+    /* Map legacy cyber-red / cyber-blue variables to cyan accent shades */
+    --cyber-red-700: #008FA1;
+    --cyber-red-600: #00CFE8;
+    --cyber-red-500: #4DE6F2;
+    --cyber-red-400: #7BEFF6;
+    --cyber-red-300: #B5F7FA;
+
+    --cyber-blue-700: #008FA1;
+    --cyber-blue-600: #00CFE8;
+    --cyber-blue-500: #4DE6F2;
+    --cyber-blue-400: #7BEFF6;
+    --cyber-blue-300: #B5F7FA;
+
+    --cyber-red-soft: rgba(0, 207, 232, 0.10);
+    --cyber-blue-soft: rgba(0, 207, 232, 0.14);
+}
+
+.dark {
+    /* DARK MODE */
+    --bg-main: #0D111C;
+    --bg-surface-1: #141A2E;
+    --bg-surface-2: #141A2E;
+    --border-color: #1E2747;
+
+    --text-primary: #E8EBF2;
+    --text-secondary: #AAB1C7;
+    --text-muted: #6C7391;
+
+    /* Accent + gold stay the same in dark mode */
+    --accent-primary: #00CFE8;
+    --accent-soft: #4DE6F2;
+    --accent-muted: #008FA1;
+
+    --gold-primary: #D4AF37;
+    --gold-soft: #E6C65C;
+    --gold-muted: #9F872B;
+
+    /* Cyan shades for legacy variables in dark context */
+    --cyber-red-700: #008FA1;
+    --cyber-red-600: #00CFE8;
+    --cyber-red-500: #4DE6F2;
+    --cyber-red-400: #7BEFF6;
+    --cyber-red-300: #B5F7FA;
+
+    --cyber-blue-700: #008FA1;
+    --cyber-blue-600: #00CFE8;
+    --cyber-blue-500: #4DE6F2;
+    --cyber-blue-400: #7BEFF6;
+    --cyber-blue-300: #B5F7FA;
+
+    --cyber-red-soft: rgba(0, 207, 232, 0.14);
+    --cyber-blue-soft: rgba(0, 207, 232, 0.18);
+}
+
+/* Neutral borders to match palette */
+.border-gray-200,
+.border-gray-300,
+.dark .border-gray-700 {
+    border-color: var(--border-color) !important;
+}
+
+/* Gold usage restricted to text / thin accents */
+.text-yellow-500,
+.text-yellow-600 {
+    color: var(--gold-primary) !important;
+}
+
+.border-yellow-500,
+.border-yellow-600 {
+    border-color: var(--gold-primary) !important;
+}
+
+/* Prevent gold on large backgrounds – use cyan accent instead */
+.bg-yellow-500,
+.bg-yellow-600,
+.bg-yellow-100,
+.dark .bg-yellow-900 {
+    background-color: var(--accent-soft) !important;
+}
+
+/* Scrollbar track uses structural background */
+::-webkit-scrollbar-track {
+    background-color: var(--bg-main) !important;
+}
+
