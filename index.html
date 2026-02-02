@@ -1349,17 +1349,24 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        // Toggle descriptions in "Centres d'intérêt" section on title click
+        // Toggle descriptions in "Centres d'intérêt" section on title or image click
         (function () {
             var cards = document.querySelectorAll('#about-interests .interest-card');
             cards.forEach(function (card) {
                 var title = card.querySelector('.interest-title');
                 var desc = card.querySelector('.interest-description');
+                var imageContainer = card.querySelector('.interest-image');
                 if (!title || !desc) return;
-                title.addEventListener('click', function () {
+
+                function toggleDescription() {
                     var isVisible = desc.style.display === 'block';
                     desc.style.display = isVisible ? 'none' : 'block';
-                });
+                }
+
+                title.addEventListener('click', toggleDescription);
+                if (imageContainer) {
+                    imageContainer.addEventListener('click', toggleDescription);
+                }
             });
         })();
     </script>
