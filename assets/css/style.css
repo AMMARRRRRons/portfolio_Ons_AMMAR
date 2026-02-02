@@ -989,14 +989,14 @@ section {
     --text-secondary: #3A4266;
     --text-muted: #7B82A6;
 
-    /* Single accent (deep cyber red) */
-    --accent-primary: #a60518;
-    --accent-soft: #a60518;
-    --accent-muted: #a60518;
+    /* Single accent (deep cyber cyan) */
+    --accent-primary: #00C9FF;
+    --accent-soft: #4DD6FF;
+    --accent-muted: #0086A3;
     /* Canonical accent variables */
-    --cyber-accent-600: #a60518;
-    --cyber-accent-500: #a60518;
-    --cyber-accent-400: #a60518;
+    --cyber-accent-600: #0086A3;
+    --cyber-accent-500: #00C9FF;
+    --cyber-accent-400: #4DD6FF;
 
     /* Gold highlight (text / small accents only) */
     --gold-primary: #D4AF37;
@@ -1004,20 +1004,20 @@ section {
     --gold-muted: #9F872B;
 
     /* Map legacy cyber-red / cyber-blue variables to the accent */
-    --cyber-red-700: #7a0413;
+    --cyber-red-700: #00566B;
     --cyber-red-600: var(--cyber-accent-600);
     --cyber-red-500: var(--cyber-accent-500);
     --cyber-red-400: var(--cyber-accent-400);
-    --cyber-red-300: #d84757;
+    --cyber-red-300: #8BE8FF;
 
     --cyber-blue-700: var(--cyber-accent-600);
     --cyber-blue-600: var(--cyber-accent-600);
     --cyber-blue-500: var(--cyber-accent-500);
     --cyber-blue-400: var(--cyber-accent-400);
-    --cyber-blue-300: #d84757;
+    --cyber-blue-300: #1E2747;
 
-    --cyber-red-soft: rgba(166, 5, 24, 0.15);
-    --cyber-blue-soft: rgba(166, 5, 24, 0.15);
+    --cyber-red-soft: rgba(0, 201, 255, 0.18);
+    --cyber-blue-soft: rgba(0, 201, 255, 0.18);
 }
 
 .dark {
@@ -1031,34 +1031,34 @@ section {
     --text-secondary: #AAB1C7;
     --text-muted: #6C7391;
 
-    /* Deep cyber red accent (same shades in dark) */
-    --accent-primary: #a60518;
-    --accent-soft: #a60518;
-    --accent-muted: #a60518;
+    /* Deep cyber cyan accent (same shades in dark) */
+    --accent-primary: #00C9FF;
+    --accent-soft: #4DD6FF;
+    --accent-muted: #0086A3;
     /* Canonical accent variables */
-    --cyber-accent-600: #a60518;
-    --cyber-accent-500: #a60518;
-    --cyber-accent-400: #a60518;
+    --cyber-accent-600: #0086A3;
+    --cyber-accent-500: #00C9FF;
+    --cyber-accent-400: #4DD6FF;
 
     --gold-primary: #D4AF37;
     --gold-soft: #E6C65C;
     --gold-muted: #9F872B;
 
-    /* Deep red accent for legacy variables in dark context */
-    --cyber-red-700: #7a0413;
+    /* Deep cyan accent for legacy variables in dark context */
+    --cyber-red-700: #00566B;
     --cyber-red-600: var(--cyber-accent-600);
     --cyber-red-500: var(--cyber-accent-500);
     --cyber-red-400: var(--cyber-accent-400);
-    --cyber-red-300: #d84757;
+    --cyber-red-300: #8BE8FF;
 
     --cyber-blue-700: var(--cyber-accent-600);
     --cyber-blue-600: var(--cyber-accent-600);
     --cyber-blue-500: var(--cyber-accent-500);
     --cyber-blue-400: var(--cyber-accent-400);
-    --cyber-blue-300: #d84757;
+    --cyber-blue-300: #1E2747;
 
-    --cyber-red-soft: rgba(166, 5, 24, 0.20);
-    --cyber-blue-soft: rgba(166, 5, 24, 0.20);
+    --cyber-red-soft: rgba(0, 201, 255, 0.24);
+    --cyber-blue-soft: rgba(0, 201, 255, 0.24);
 }
 
 /* Neutral borders to match palette */
