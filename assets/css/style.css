@@ -993,23 +993,27 @@ section {
     --accent-primary: #420911;
     --accent-soft: #6A1A22;
     --accent-muted: #2B060B;
+    /* Canonical accent variables */
+    --cyber-accent-600: #420911;
+    --cyber-accent-500: #6A1A22;
+    --cyber-accent-400: #8C2A33;
 
     /* Gold highlight (text / small accents only) */
     --gold-primary: #D4AF37;
     --gold-soft: #E6C65C;
     --gold-muted: #9F872B;
 
-    /* Map legacy cyber-red / cyber-blue variables */
+    /* Map legacy cyber-red / cyber-blue variables to the accent */
     --cyber-red-700: #2B060B;
-    --cyber-red-600: #420911;
-    --cyber-red-500: #6A1A22;
-    --cyber-red-400: #8A3038;
+    --cyber-red-600: var(--cyber-accent-600);
+    --cyber-red-500: var(--cyber-accent-500);
+    --cyber-red-400: var(--cyber-accent-400);
     --cyber-red-300: #B4565E;
 
-    --cyber-blue-700: #1E2747;
-    --cyber-blue-600: #1E2747;
-    --cyber-blue-500: #1E2747;
-    --cyber-blue-400: #1E2747;
+    --cyber-blue-700: var(--cyber-accent-600);
+    --cyber-blue-600: var(--cyber-accent-600);
+    --cyber-blue-500: var(--cyber-accent-500);
+    --cyber-blue-400: var(--cyber-accent-400);
     --cyber-blue-300: #1E2747;
 
     --cyber-red-soft: rgba(66, 9, 17, 0.18);
@@ -1031,6 +1035,10 @@ section {
     --accent-primary: #420911;
     --accent-soft: #6A1A22;
     --accent-muted: #2B060B;
+    /* Canonical accent variables */
+    --cyber-accent-600: #420911;
+    --cyber-accent-500: #6A1A22;
+    --cyber-accent-400: #8C2A33;
 
     --gold-primary: #D4AF37;
     --gold-soft: #E6C65C;
@@ -1038,15 +1046,15 @@ section {
 
     /* Deep red accent for legacy variables in dark context */
     --cyber-red-700: #2B060B;
-    --cyber-red-600: #420911;
-    --cyber-red-500: #6A1A22;
-    --cyber-red-400: #8A3038;
+    --cyber-red-600: var(--cyber-accent-600);
+    --cyber-red-500: var(--cyber-accent-500);
+    --cyber-red-400: var(--cyber-accent-400);
     --cyber-red-300: #B4565E;
 
-    --cyber-blue-700: #1E2747;
-    --cyber-blue-600: #1E2747;
-    --cyber-blue-500: #1E2747;
-    --cyber-blue-400: #1E2747;
+    --cyber-blue-700: var(--cyber-accent-600);
+    --cyber-blue-600: var(--cyber-accent-600);
+    --cyber-blue-500: var(--cyber-accent-500);
+    --cyber-blue-400: var(--cyber-accent-400);
     --cyber-blue-300: #1E2747;
 
     --cyber-red-soft: rgba(66, 9, 17, 0.24);
