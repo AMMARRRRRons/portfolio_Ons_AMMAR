@@ -89,9 +89,10 @@
                 
                 <!-- Dark Mode Toggle & Mobile Menu Button -->
                 <div class="flex items-center space-x-4">
-                    <button id="darkModeToggle" type="button" class="p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all text-gray-700 dark:text-gray-300 border-2 border-gray-300 dark:border-gray-600 hover:border-pink-500 dark:hover:border-pink-400" title="Basculer le mode sombre/clair" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon dark:hidden text-xl text-gray-700"></i>
-                        <i class="fas fa-sun hidden dark:inline text-xl text-yellow-400"></i>
+                    <button id="darkModeToggle" type="button" class="relative inline-flex items-center h-8 rounded-full w-16 bg-gray-300 dark:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2" title="Basculer le mode sombre/clair" aria-label="Toggle dark mode">
+                        <span class="absolute left-1 top-1/2 transform -translate-y-1/2 text-xs font-semibold text-gray-600 dark:text-gray-400 transition-opacity duration-300 dark:opacity-0 dark:pointer-events-none">LIGHT</span>
+                        <span class="absolute right-1 top-1/2 transform -translate-y-1/2 text-xs font-semibold text-gray-400 dark:text-gray-200 transition-opacity duration-300 opacity-0 pointer-events-none dark:opacity-100">DARK</span>
+                        <span class="inline-block h-6 w-6 rounded-full bg-white dark:bg-gray-900 transform transition-transform duration-300 translate-x-1 dark:translate-x-9 shadow-md"></span>
                     </button>
                     <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                         <i class="fas fa-bars"></i>
