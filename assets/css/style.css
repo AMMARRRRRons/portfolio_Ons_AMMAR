@@ -545,6 +545,7 @@ body {
     background: linear-gradient(135deg, var(--cyber-red-600), var(--cyber-red-400), var(--cyber-blue-400));
     background-size: 200% 200%;
     border-radius: 9999px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
     box-shadow: 0 10px 20px rgba(255, 47, 129, 0.35), 0 0 20px rgba(63, 216, 255, 0.3);
     text-decoration: none;
     transition: all 0.25s ease;
