@@ -547,7 +547,19 @@
             <!-- Projets Personnels -->
             <div id="projects-personal" class="mt-16">
                 <h3 class="text-3xl font-semibold mb-8 text-center">Projets Personnels</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 border-2 border-gray-300 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                <div class="relative overflow-hidden border-2 border-gray-300 dark:border-gray-700 rounded-lg p-6">
+                    <!-- Background Video -->
+                    <video 
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                        class="absolute inset-0 w-full h-full object-cover z-0"
+                    >
+                        <source src="assets/videos/hero-background.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/80 dark:from-gray-900/80 dark:via-gray-900/70 dark:to-gray-900/90 z-0"></div>
+                    <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Project 1 - Packet Sniffer -->
                     <div class="project-card">
