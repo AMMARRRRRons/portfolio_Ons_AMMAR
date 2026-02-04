@@ -654,251 +654,214 @@
         <div class="container mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12">Ce que j'ai pu acquérir</h2>
             
-            <!-- Réseaux et sécurité -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Réseaux et sécurité</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <div class="cert-card group cursor-pointer" title="ARP Spoofing">
-                        <div class="cert-icon bg-gradient-to-br from-indigo-500 to-blue-600">
-                            <i class="fas fa-network-wired text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">ARP Spoofing</p>
+            <!-- Tableau compact avec 4 colonnes -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
+                <!-- Réseaux et sécurité -->
+                <div class="cert-card group cursor-pointer" title="ARP Spoofing">
+                    <div class="cert-icon bg-gradient-to-br from-indigo-500 to-blue-600">
+                        <i class="fas fa-network-wired text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="Man-in-the-Middle">
-                        <div class="cert-icon bg-gradient-to-br from-purple-500 to-pink-600">
-                            <i class="fas fa-user-secret text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">MITM</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Eavesdropping">
-                        <div class="cert-icon bg-gradient-to-br from-red-500 to-orange-600">
-                            <i class="fas fa-headphones text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Eavesdropping</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Wazuh SIEM">
-                        <div class="cert-icon bg-gradient-to-br from-emerald-500 to-teal-600">
-                            <i class="fas fa-shield-alt text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Wazuh</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Wireshark">
-                        <div class="cert-icon bg-gradient-to-br from-cyan-500 to-blue-600">
-                            <i class="fas fa-search text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Wireshark</p>
-                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">ARP Spoofing</p>
                 </div>
-            </div>
-
-            <!-- Standards de sécurité -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Standards de sécurité</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-3xl mx-auto">
-                    <div class="cert-card group cursor-pointer" title="NIST SP 800-12">
-                        <div class="cert-icon bg-gradient-to-br from-blue-500 to-indigo-600">
-                            <i class="fas fa-file-shield text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">NIST SP 800-12</p>
+                <div class="cert-card group cursor-pointer" title="Man-in-the-Middle">
+                    <div class="cert-icon bg-gradient-to-br from-purple-500 to-pink-600">
+                        <i class="fas fa-user-secret text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="EBIOS Risk Manager">
-                        <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
-                            <i class="fas fa-clipboard-check text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">EBIOS RM</p>
-                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">MITM</p>
                 </div>
-            </div>
-
-            <!-- Systèmes d'exploitation -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Systèmes d'exploitation</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <div class="cert-card group cursor-pointer" title="Linux">
-                        <div class="cert-icon bg-gradient-to-br from-yellow-500 to-orange-600">
-                            <i class="fab fa-linux text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Linux</p>
+                <div class="cert-card group cursor-pointer" title="Eavesdropping">
+                    <div class="cert-icon bg-gradient-to-br from-red-500 to-orange-600">
+                        <i class="fas fa-headphones text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="Ubuntu">
-                        <div class="cert-icon bg-gradient-to-br from-orange-500 to-red-600">
-                            <i class="fab fa-ubuntu text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Ubuntu</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Kali Linux">
-                        <div class="cert-icon bg-gradient-to-br from-blue-500 to-indigo-600">
-                            <i class="fas fa-terminal text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Kali</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Parrot OS">
-                        <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
-                            <i class="fas fa-shield-alt text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Parrot</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Windows Server">
-                        <div class="cert-icon bg-gradient-to-br from-blue-500 to-cyan-600">
-                            <i class="fab fa-windows text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Windows Server</p>
-                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Eavesdropping</p>
                 </div>
-            </div>
-
-            <!-- Services Web et données -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Services Web et données</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-3xl mx-auto">
-                    <div class="cert-card group cursor-pointer" title="XML">
-                        <div class="cert-icon bg-gradient-to-br from-orange-500 to-red-600">
-                            <i class="fas fa-code text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">XML</p>
+                <div class="cert-card group cursor-pointer" title="Wazuh SIEM">
+                    <div class="cert-icon bg-gradient-to-br from-emerald-500 to-teal-600">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="XSD (SOA)">
-                        <div class="cert-icon bg-gradient-to-br from-purple-500 to-pink-600">
-                            <i class="fas fa-sitemap text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">XSD (SOA)</p>
-                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Wazuh</p>
                 </div>
-            </div>
-
-            <!-- Langages de programmation -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Langages de programmation</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <div class="cert-card group cursor-pointer" title="Python">
-                        <div class="cert-icon bg-gradient-to-br from-yellow-500 to-blue-600">
-                            <i class="fab fa-python text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Python</p>
+                
+                <!-- Ligne 2 -->
+                <div class="cert-card group cursor-pointer" title="Wireshark">
+                    <div class="cert-icon bg-gradient-to-br from-cyan-500 to-blue-600">
+                        <i class="fas fa-search text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="C">
-                        <div class="cert-icon bg-gradient-to-br from-blue-500 to-indigo-600">
-                            <i class="fas fa-code text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">C</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="HTML">
-                        <div class="cert-icon bg-gradient-to-br from-orange-500 to-red-600">
-                            <i class="fab fa-html5 text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">HTML</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Java">
-                        <div class="cert-icon bg-gradient-to-br from-red-500 to-orange-600">
-                            <i class="fab fa-java text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Java</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Matlab">
-                        <div class="cert-icon bg-gradient-to-br from-orange-500 to-yellow-600">
-                            <i class="fas fa-chart-line text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Matlab</p>
-                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Wireshark</p>
                 </div>
-            </div>
-
-            <!-- Big Data -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Big Data</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-3xl mx-auto">
-                    <div class="cert-card group cursor-pointer" title="Cloudera">
-                        <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
-                            <i class="fas fa-database text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Cloudera</p>
+                <div class="cert-card group cursor-pointer" title="NIST SP 800-12">
+                    <div class="cert-icon bg-gradient-to-br from-blue-500 to-indigo-600">
+                        <i class="fas fa-file-shield text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="Hadoop">
-                        <div class="cert-icon bg-gradient-to-br from-blue-500 to-cyan-600">
-                            <i class="fas fa-server text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Hadoop</p>
-                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">NIST SP 800-12</p>
                 </div>
-            </div>
-
-            <!-- Bibliothèques & frameworks -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Bibliothèques & frameworks</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <div class="cert-card group cursor-pointer" title="Pandas">
-                        <div class="cert-icon bg-gradient-to-br from-blue-500 to-indigo-600">
-                            <i class="fas fa-table text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Pandas</p>
+                <div class="cert-card group cursor-pointer" title="EBIOS Risk Manager">
+                    <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
+                        <i class="fas fa-clipboard-check text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="Numpy">
-                        <div class="cert-icon bg-gradient-to-br from-green-500 to-teal-600">
-                            <i class="fas fa-calculator text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Numpy</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Qt">
-                        <div class="cert-icon bg-gradient-to-br from-cyan-500 to-blue-600">
-                            <i class="fas fa-window-maximize text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Qt</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Socket">
-                        <div class="cert-icon bg-gradient-to-br from-purple-500 to-pink-600">
-                            <i class="fas fa-plug text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Socket</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="scikit-learn">
-                        <div class="cert-icon bg-gradient-to-br from-orange-500 to-red-600">
-                            <i class="fas fa-brain text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">scikit-learn</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="FastAPI">
-                        <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
-                            <i class="fas fa-bolt text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">FastAPI</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="Tkinter">
-                        <div class="cert-icon bg-gradient-to-br from-blue-500 to-cyan-600">
-                            <i class="fas fa-window-restore text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Tkinter</p>
-                    </div>
-                    <div class="cert-card group cursor-pointer" title="SQLite">
-                        <div class="cert-icon bg-gradient-to-br from-indigo-500 to-purple-600">
-                            <i class="fas fa-database text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">SQLite</p>
-                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">EBIOS RM</p>
                 </div>
-            </div>
-
-            <!-- Outils de développement -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Outils de développement</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <div class="cert-card group cursor-pointer" title="Android Studio">
-                        <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
-                            <i class="fab fa-android text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Android Studio</p>
+                <div class="cert-card group cursor-pointer" title="Linux">
+                    <div class="cert-icon bg-gradient-to-br from-yellow-500 to-orange-600">
+                        <i class="fab fa-linux text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="Git/GitHub">
-                        <div class="cert-icon bg-gradient-to-br from-gray-700 to-gray-900">
-                            <i class="fab fa-github text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Git/GitHub</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Linux</p>
+                </div>
+                
+                <!-- Ligne 3 -->
+                <div class="cert-card group cursor-pointer" title="Ubuntu">
+                    <div class="cert-icon bg-gradient-to-br from-orange-500 to-red-600">
+                        <i class="fab fa-ubuntu text-white text-xl"></i>
                     </div>
-                    <div class="cert-card group cursor-pointer" title="Terraform">
-                        <div class="cert-icon bg-gradient-to-br from-purple-500 to-indigo-600">
-                            <i class="fas fa-cloud text-white text-2xl"></i>
-                        </div>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-2">Terraform</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Ubuntu</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Kali Linux">
+                    <div class="cert-icon bg-gradient-to-br from-blue-500 to-indigo-600">
+                        <i class="fas fa-terminal text-white text-xl"></i>
                     </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Kali</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Parrot OS">
+                    <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Parrot</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Windows Server">
+                    <div class="cert-icon bg-gradient-to-br from-blue-500 to-cyan-600">
+                        <i class="fab fa-windows text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Windows Server</p>
+                </div>
+                
+                <!-- Ligne 4 -->
+                <div class="cert-card group cursor-pointer" title="XML">
+                    <div class="cert-icon bg-gradient-to-br from-orange-500 to-red-600">
+                        <i class="fas fa-code text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">XML</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="XSD (SOA)">
+                    <div class="cert-icon bg-gradient-to-br from-purple-500 to-pink-600">
+                        <i class="fas fa-sitemap text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">XSD (SOA)</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Python">
+                    <div class="cert-icon bg-gradient-to-br from-yellow-500 to-blue-600">
+                        <i class="fab fa-python text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Python</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="C">
+                    <div class="cert-icon bg-gradient-to-br from-blue-500 to-indigo-600">
+                        <i class="fas fa-code text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">C</p>
+                </div>
+                
+                <!-- Ligne 5 -->
+                <div class="cert-card group cursor-pointer" title="HTML">
+                    <div class="cert-icon bg-gradient-to-br from-orange-500 to-red-600">
+                        <i class="fab fa-html5 text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">HTML</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Java">
+                    <div class="cert-icon bg-gradient-to-br from-red-500 to-orange-600">
+                        <i class="fab fa-java text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Java</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Matlab">
+                    <div class="cert-icon bg-gradient-to-br from-orange-500 to-yellow-600">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Matlab</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Cloudera">
+                    <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
+                        <i class="fas fa-database text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Cloudera</p>
+                </div>
+                
+                <!-- Ligne 6 -->
+                <div class="cert-card group cursor-pointer" title="Hadoop">
+                    <div class="cert-icon bg-gradient-to-br from-blue-500 to-cyan-600">
+                        <i class="fas fa-server text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Hadoop</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Pandas">
+                    <div class="cert-icon bg-gradient-to-br from-blue-500 to-indigo-600">
+                        <i class="fas fa-table text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Pandas</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Numpy">
+                    <div class="cert-icon bg-gradient-to-br from-green-500 to-teal-600">
+                        <i class="fas fa-calculator text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Numpy</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Qt">
+                    <div class="cert-icon bg-gradient-to-br from-cyan-500 to-blue-600">
+                        <i class="fas fa-window-maximize text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Qt</p>
+                </div>
+                
+                <!-- Ligne 7 -->
+                <div class="cert-card group cursor-pointer" title="Socket">
+                    <div class="cert-icon bg-gradient-to-br from-purple-500 to-pink-600">
+                        <i class="fas fa-plug text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Socket</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="scikit-learn">
+                    <div class="cert-icon bg-gradient-to-br from-orange-500 to-red-600">
+                        <i class="fas fa-brain text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">scikit-learn</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="FastAPI">
+                    <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
+                        <i class="fas fa-bolt text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">FastAPI</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Tkinter">
+                    <div class="cert-icon bg-gradient-to-br from-blue-500 to-cyan-600">
+                        <i class="fas fa-window-restore text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Tkinter</p>
+                </div>
+                
+                <!-- Ligne 8 -->
+                <div class="cert-card group cursor-pointer" title="SQLite">
+                    <div class="cert-icon bg-gradient-to-br from-indigo-500 to-purple-600">
+                        <i class="fas fa-database text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">SQLite</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Android Studio">
+                    <div class="cert-icon bg-gradient-to-br from-green-500 to-emerald-600">
+                        <i class="fab fa-android text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Android Studio</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Git/GitHub">
+                    <div class="cert-icon bg-gradient-to-br from-gray-700 to-gray-900">
+                        <i class="fab fa-github text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Git/GitHub</p>
+                </div>
+                <div class="cert-card group cursor-pointer" title="Terraform">
+                    <div class="cert-icon bg-gradient-to-br from-purple-500 to-indigo-600">
+                        <i class="fas fa-cloud text-white text-xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 text-center mt-1">Terraform</p>
                 </div>
             </div>
         </div>

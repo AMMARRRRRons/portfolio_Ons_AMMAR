@@ -787,6 +787,15 @@ body {
     @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4;
 }
 
+/* Compact skill cards for acquired section */
+#acquired .cert-card {
+    @apply p-3;
+}
+
+#acquired .cert-icon {
+    @apply w-12 h-12 mb-2;
+}
+
 /* Contact Icons */
 .contact-icon {
     @apply w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0;
