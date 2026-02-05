@@ -703,7 +703,7 @@ body {
 }
 
 .tech-tag {
-    @apply inline-flex items-center px-3 py-1 bg-white dark:bg-gray-900 border border-pink-300 dark:border-pink-500 text-pink-700 dark:text-pink-200 text-xs font-semibold rounded-lg shadow-sm hover:bg-pink-50 dark:hover:bg-pink-900/30 hover:border-pink-500 dark:hover:border-pink-400 transition-all duration-200;
+    @apply inline-flex items-center px-3 py-1 bg-gradient-to-r from-pink-100 to-purple-100 dark:from-pink-900 dark:to-purple-900 border-2 border-pink-400 dark:border-pink-500 text-pink-800 dark:text-pink-100 text-xs font-semibold rounded-lg shadow-md hover:shadow-lg hover:border-pink-500 dark:hover:border-pink-300 transition-all duration-200;
 }
 
 /* Education Cards */
